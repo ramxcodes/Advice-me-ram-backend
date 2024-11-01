@@ -11,8 +11,13 @@ const PORT = process.env.PORT || 5000;
 
 app.use(express.json());
 app.use(cors());
-
 app.use('/', adviceRoutes); 
+
+app.get('/hello', (req, res) => {
+    res.send('hello world')
+  })
+
+
 
 app.listen(PORT, () => {
     connectDB();
