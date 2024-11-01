@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(cors());
 app.use('/', adviceRoutes); 
 
-app.get('/hello', (req, res) => {
+app.get('/', (req, res) => {
     res.send('hello world')
   })
 
